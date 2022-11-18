@@ -1,6 +1,8 @@
 module com.example.loginsystem {
     requires javafx.controls;
     requires javafx.fxml;
+    requires gson;
+    requires java.sql;
 
 
     opens com.example.loginsystem to javafx.fxml;
