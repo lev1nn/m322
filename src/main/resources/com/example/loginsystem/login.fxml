@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #888888;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginsystem.Login">
+   <center>
+      <AnchorPane prefHeight="406.0" prefWidth="614.0" style="-fx-background-color: C2C5CC;" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#404040" height="177.0" layoutX="143.0" layoutY="170.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="314.0" />
+            <TextField fx:id="username" layoutX="166.0" layoutY="191.0" prefHeight="36.0" prefWidth="267.0" promptText="Username" />
+            <PasswordField fx:id="password" layoutX="167.0" layoutY="241.0" prefHeight="34.0" prefWidth="265.0" promptText="Password" />
+            <Button fx:id="button" layoutX="353.0" layoutY="287.0" mnemonicParsing="false" onAction="#loginButtonClicked" prefHeight="34.0" prefWidth="80.0" text="Log In" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
