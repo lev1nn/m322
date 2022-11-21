@@ -20,11 +20,11 @@
                </image>
             </ImageView>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#404040" height="220.0" layoutX="172.0" layoutY="128.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="314.0" />
-            <TextField fx:id="username" layoutX="195.0" layoutY="192.0" prefHeight="36.0" prefWidth="267.0" promptText="Username" />
+            <TextField fx:id="username" layoutX="195.0" layoutY="193.0" prefHeight="36.0" prefWidth="267.0" promptText="Username" />
             <PasswordField fx:id="password" layoutX="196.0" layoutY="242.0" prefHeight="34.0" prefWidth="265.0" promptText="Password" />
-            <Button fx:id="button" layoutX="382.0" layoutY="288.0" mnemonicParsing="false" onAction="#registerButtonClicked" prefHeight="34.0" prefWidth="80.0" text="Register" />
+            <Button fx:id="button" layoutX="382.0" layoutY="288.0" mnemonicParsing="false" onAction="#registerButtonClicked" prefHeight="34.0" prefWidth="80.0" style="-fx-background-color: #8c8c8c;" text="Register" textFill="WHITE" />
             <TextField fx:id="emailaddress" layoutX="195.0" layoutY="144.0" prefHeight="36.0" prefWidth="267.0" promptText="Email" />
-            <Hyperlink fx:id="loginButton" layoutX="196.0" layoutY="293.0" onAction="#loginButtonClicked" text="Log In" />
+            <Hyperlink fx:id="loginButton" layoutX="196.0" layoutY="293.0" onAction="#loginButtonClicked" text="Log In" textFill="WHITE" />
          </children>
       </AnchorPane>
    </center>
