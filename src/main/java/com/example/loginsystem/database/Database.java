@@ -19,10 +19,10 @@ public class Database {
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
     private Database() throws IOException {
-        Gson gson = new Gson();
+        /*Gson gson = new Gson();
         Reader reader = Files.newBufferedReader(Paths.get(FILE_PATH));
         Type listType = new TypeToken<ArrayList<User>>() {}.getType();
-        users = gson.fromJson(reader, listType);
+        users = gson.fromJson(reader, listType);*/
     }
 
     public static Database getInstance() throws IOException {
@@ -32,9 +32,13 @@ public class Database {
         return database;
     }
 
+    public void addUser(String username, String password, String emailAddress) {
+        users.add(new User(username, password, emailAddress));
+    }
+
     public boolean checkUser(String username) {
-        for (int i = 0; i < users.size(); i++) {
-            if (users.get(i).getUsername().equals(username)) {
+        for (User user : users) {
+            if (user.getUsername().equals(username)) {
                 return true;
             }
         }
@@ -42,9 +46,9 @@ public class Database {
     }
 
     public boolean checkPassword(String username, String password) {
-        for (int i = 0; i < users.size(); i++) {
-            if (users.get(i).getUsername().equals(username)) {
-                if (users.get(i).getPassword().equals(password)) {
+        for (User user : users) {
+            if (user.getUsername().equals(username)) {
+                if (user.getPassword().equals(password)) {
                     return true;
                 } else return false;
             }

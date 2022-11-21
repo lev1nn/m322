@@ -15,7 +15,7 @@
          <children>
             <ImageView fitHeight="415.0" fitWidth="728.0" layoutX="-65.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/mojave2.jpg" />
+                  <Image url="@img/mojave-dark.jpg" />
                </image>
             </ImageView>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#404040" height="130.0" layoutX="175.0" layoutY="222.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="314.0" />

@@ -11,7 +11,6 @@ import java.io.IOException;
 
 public class Main extends Application {
     private static Stage stg;
-    private static Database db;
 
     public static void main(String[] args) {
         launch();
@@ -25,8 +24,6 @@ public class Main extends Application {
         stage.setTitle("Login System");
         stage.setScene(scene);
         stage.show();
-
-        //db = Database.getInstance();
     }
 
     public void changeScene(String fxml) throws IOException {

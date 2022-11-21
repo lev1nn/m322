@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #888888;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginsystem.Login">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #888888;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginsystem.Register">
    <center>
       <AnchorPane prefHeight="406.0" prefWidth="614.0" style="-fx-background-color: C2C5CC;" BorderPane.alignment="CENTER">
          <children>
@@ -19,12 +19,12 @@
                   <Image url="@img/mojave-dark.jpg" />
                </image>
             </ImageView>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#404040" height="177.0" layoutX="172.0" layoutY="171.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="314.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#404040" height="220.0" layoutX="172.0" layoutY="128.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="314.0" />
             <TextField fx:id="username" layoutX="195.0" layoutY="192.0" prefHeight="36.0" prefWidth="267.0" promptText="Username" />
             <PasswordField fx:id="password" layoutX="196.0" layoutY="242.0" prefHeight="34.0" prefWidth="265.0" promptText="Password" />
-            <Button fx:id="button" layoutX="382.0" layoutY="288.0" mnemonicParsing="false" onAction="#loginButtonClicked" prefHeight="34.0" prefWidth="80.0" text="Log In" />
-            <Hyperlink fx:id="registerButton" layoutX="313.0" layoutY="293.0" onAction="#registerButtonClicked" text="Register" />
-            <Hyperlink fx:id="resetPasswordButton" layoutX="195.0" layoutY="293.0" onAction="#resetPasswordButtonClicked" text="Forgot Password?" />
+            <Button fx:id="button" layoutX="382.0" layoutY="288.0" mnemonicParsing="false" onAction="#registerButtonClicked" prefHeight="34.0" prefWidth="80.0" text="Register" />
+            <TextField fx:id="emailaddress" layoutX="195.0" layoutY="144.0" prefHeight="36.0" prefWidth="267.0" promptText="Email" />
+            <Hyperlink fx:id="loginButton" layoutX="196.0" layoutY="293.0" onAction="#loginButtonClicked" text="Log In" />
          </children>
       </AnchorPane>
    </center>
