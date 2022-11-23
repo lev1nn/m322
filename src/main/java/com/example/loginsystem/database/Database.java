@@ -12,10 +12,13 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
+import java.nio.charset.StandardCharsets;
+import com.google.common.hash.Hashing;
+
 public class Database {
     private ArrayList<User> users;
     private static Database database;
-    private final String FILE_PATH = String.valueOf(Paths.get("src\\main\\java\\com\\example\\loginsystem\\database\\Users.json"));
+    private final String FILE_PATH = String.valueOf(Paths.get("src\\main\\java\\com\\example\\loginsystem\\database\\Users_New.json"));
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
     private Database() throws IOException {
@@ -63,9 +66,13 @@ public class Database {
         fileWriter.close();
     }
 
-    public void printAllUsers() {
+    public String generateHash(String password){
+        return Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
+    }
+
+    /*public void printAllUsers() {
         for (int i = 0; i < users.size(); i++) {
             System.out.println(users.get(i).getUsername() + ", " + users.get(i).getEmailAddress() + ", " + users.get(i).getPassword());
         }
-    }
+    }*/
 }

@@ -23,7 +23,7 @@ public class Register {
 
     public void registerButtonClicked(ActionEvent event) throws IOException {
         db = Database.getInstance();
-        db.addUser(String.valueOf(username.getText()), String.valueOf(password.getText()), String.valueOf(emailaddress.getText()));
+        db.addUser(String.valueOf(username.getText()), (db.generateHash(String.valueOf(password.getText()))), String.valueOf(emailaddress.getText()));
         db.saveChanges();
 
         Main main = new Main();

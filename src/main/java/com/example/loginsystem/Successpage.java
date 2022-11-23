@@ -1,6 +1,5 @@
 package com.example.loginsystem;
 
-import com.example.loginsystem.database.Database;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

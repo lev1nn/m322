@@ -4,6 +4,7 @@ import com.example.loginsystem.database.Database;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
@@ -18,6 +19,8 @@ public class Login {
     private TextField username;
     @FXML
     private PasswordField password;
+    @FXML
+    private Label label;
 
     public void loginButtonClicked(ActionEvent event) throws IOException {
         checkLogin();
@@ -28,13 +31,13 @@ public class Login {
         db = Database.getInstance();
 
         if (db.checkUser(String.valueOf(username.getText()))) {
-            if (db.checkPassword(String.valueOf(username.getText()), String.valueOf(password.getText()))) {
+            if (db.checkPassword(String.valueOf(username.getText()), db.generateHash(String.valueOf(password.getText())))) {
                 main.changeScene("afterlogin.fxml");
             } else {
-                System.out.println("password not valid");
+               label.setText("invalid password");
             }
         } else {
-            System.out.println("username not valid");
+            label.setText("invalid user");
         }
     }
 

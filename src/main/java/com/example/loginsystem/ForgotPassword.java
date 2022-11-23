@@ -1,6 +1,5 @@
 package com.example.loginsystem;
 
-import com.example.loginsystem.database.Database;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -15,9 +14,8 @@ public class ForgotPassword {
     private TextField emailaddress;
 
     public void resetPasswordButtonClicked(ActionEvent event) throws IOException {
-
+        // TODO send mail with new password
     }
-
 
     public void loginButtonClicked(ActionEvent event) throws IOException {
         Main main = new Main();
