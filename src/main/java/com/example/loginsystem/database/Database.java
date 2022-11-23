@@ -19,10 +19,10 @@ public class Database {
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
     private Database() throws IOException {
-        /*Gson gson = new Gson();
+        Gson gson = new Gson();
         Reader reader = Files.newBufferedReader(Paths.get(FILE_PATH));
         Type listType = new TypeToken<ArrayList<User>>() {}.getType();
-        users = gson.fromJson(reader, listType);*/
+        users = gson.fromJson(reader, listType);
     }
 
     public static Database getInstance() throws IOException {
@@ -61,5 +61,11 @@ public class Database {
         gson.toJson(users, fileWriter);
         fileWriter.flush();
         fileWriter.close();
+    }
+
+    public void printAllUsers() {
+        for (int i = 0; i < users.size(); i++) {
+            System.out.println(users.get(i).getUsername() + ", " + users.get(i).getEmailAddress() + ", " + users.get(i).getPassword());
+        }
     }
 }

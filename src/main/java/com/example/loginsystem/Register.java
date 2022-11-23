@@ -23,7 +23,8 @@ public class Register {
 
     public void registerButtonClicked(ActionEvent event) throws IOException {
         db = Database.getInstance();
-        db.addUser(String.valueOf(username), String.valueOf(password), String.valueOf(emailaddress));
+        db.addUser(String.valueOf(username.getText()), String.valueOf(password.getText()), String.valueOf(emailaddress.getText()));
+        db.saveChanges();
 
         Main main = new Main();
         main.changeScene("login.fxml");

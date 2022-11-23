@@ -1,6 +1,5 @@
 package com.example.loginsystem;
 
-import com.example.loginsystem.database.Database;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

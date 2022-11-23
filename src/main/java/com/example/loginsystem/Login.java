@@ -25,19 +25,16 @@ public class Login {
 
     private void checkLogin() throws IOException {
         Main main = new Main();
+        db = Database.getInstance();
 
-        /*db = Database.getInstance();
-
-        db.addUser("user", "1234", "email");
-
-        if (db.checkUser(String.valueOf(username))) {
-            if (db.checkPassword(String.valueOf(username), String.valueOf(password))) {
+        if (db.checkUser(String.valueOf(username.getText()))) {
+            if (db.checkPassword(String.valueOf(username.getText()), String.valueOf(password.getText()))) {
                 main.changeScene("afterlogin.fxml");
-            } else System.out.println("password not valid");
-        } else System.out.println("username not valid");*/
-
-        if (username.getText().toString().equals("root") && password.getText().toString().equals("1234")) {
-            main.changeScene("afterlogin.fxml");
+            } else {
+                System.out.println("password not valid");
+            }
+        } else {
+            System.out.println("username not valid");
         }
     }
 
