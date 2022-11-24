@@ -51,4 +51,9 @@ public class Login {
         Main main = new Main();
         main.changeScene("forgotpassword.fxml");
     }
+
+    public void toggleButtonClicked(ActionEvent event) throws IOException {
+        Main main = new Main();
+        main.changeWallpaper();
+    }
 }

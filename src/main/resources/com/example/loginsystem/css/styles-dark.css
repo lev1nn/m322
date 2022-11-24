@@ -1,6 +1,9 @@
-#pane{
-    -fx-background-image: url("@img/mojave-dark.jpg");
-    -fx-background-repeat: stretch;
-    -fx-background-size: 600 400;
-    -fx-background-position: center center;
+.root{
+    -fx-background-image: url("../img/mojave-dark.jpg");
+    -fx-background-size: cover;
+}
+
+.toggle-button{
+    -fx-graphic: url("../icons/sun-24.png");
+    -fx-background-color: #2B2D2F;
 }

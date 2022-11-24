@@ -29,4 +29,9 @@ public class Successpage {
 
         db.setInactive(db.getActiveUsers().get(0).getUsername());
     }
+
+    public void toggleButtonClicked(ActionEvent event) throws IOException {
+        Main main = new Main();
+        main.changeWallpaper();
+    }
 }
