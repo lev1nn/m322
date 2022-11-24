@@ -17,6 +17,7 @@ import com.google.common.hash.Hashing;
 
 public class Database {
     private ArrayList<User> users;
+    public ArrayList<User> activeUsers;
     private static Database database;
     private final String FILE_PATH = String.valueOf(Paths.get("src\\main\\java\\com\\example\\loginsystem\\database\\Users_New.json"));
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
@@ -70,9 +71,24 @@ public class Database {
         return Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
     }
 
-    /*public void printAllUsers() {
-        for (int i = 0; i < users.size(); i++) {
-            System.out.println(users.get(i).getUsername() + ", " + users.get(i).getEmailAddress() + ", " + users.get(i).getPassword());
+    public void setActive(String username) {
+        for (User user : users) {
+            if (user.getUsername().equals(username)) {
+                activeUsers = new ArrayList<>();
+                activeUsers.add(0, user);
+            }
         }
-    }*/
+    }
+
+    public void setInactive(String username) {
+        for (User user : users) {
+            if (user.getUsername().equals(username)) {
+                activeUsers.remove(user);
+            }
+        }
+    }
+
+    public ArrayList<User> getActiveUsers() {
+        return activeUsers;
+    }
 }

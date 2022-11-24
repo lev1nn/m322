@@ -4,6 +4,7 @@ import com.example.loginsystem.database.Database;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
@@ -20,14 +21,20 @@ public class Register {
     private PasswordField password;
     @FXML
     private TextField emailaddress;
+    @FXML
+    private Label label;
 
     public void registerButtonClicked(ActionEvent event) throws IOException {
         db = Database.getInstance();
-        db.addUser(String.valueOf(username.getText()), (db.generateHash(String.valueOf(password.getText()))), String.valueOf(emailaddress.getText()));
-        db.saveChanges();
+        if (!db.checkUser(String.valueOf(username.getText()))) {
+            db.addUser(String.valueOf(username.getText()), (db.generateHash(String.valueOf(password.getText()))), String.valueOf(emailaddress.getText()));
+            db.saveChanges();
 
-        Main main = new Main();
-        main.changeScene("login.fxml");
+            Main main = new Main();
+            main.changeScene("login.fxml");
+        } else {
+            label.setText("User with this username already exists");
+        }
     }
 
     public void loginButtonClicked(ActionEvent event) throws IOException {

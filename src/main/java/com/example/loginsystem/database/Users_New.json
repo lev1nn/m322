@@ -8,5 +8,15 @@
     "username": "myPasswordIs1",
     "password": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
     "emailAddress": "user@gmail.com"
+  },
+  {
+    "username": "user",
+    "password": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
+    "emailAddress": "user@gmail.com"
+  },
+  {
+    "username": "levin",
+    "password": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+    "emailAddress": "contact@levinschaller.com"
   }
 ]

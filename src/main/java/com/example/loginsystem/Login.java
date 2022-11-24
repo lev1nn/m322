@@ -32,6 +32,7 @@ public class Login {
 
         if (db.checkUser(String.valueOf(username.getText()))) {
             if (db.checkPassword(String.valueOf(username.getText()), db.generateHash(String.valueOf(password.getText())))) {
+                db.setActive(String.valueOf(username.getText()));
                 main.changeScene("afterlogin.fxml");
             } else {
                label.setText("invalid password");
