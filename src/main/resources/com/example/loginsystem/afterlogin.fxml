@@ -18,8 +18,8 @@
                   <Image url="@img/mojave-dark.jpg" />
                </image>
             </ImageView>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#404040" height="130.0" layoutX="175.0" layoutY="222.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="314.0" />
-            <Button fx:id="button" layoutX="287.0" layoutY="296.0" mnemonicParsing="false" onAction="#logoutButtonClicked" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: #8c8c8c;" text="Log Out" textFill="WHITE" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#696969" height="130.0" layoutX="175.0" layoutY="222.0" opacity="0.4" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="314.0" />
+            <Button fx:id="button" layoutX="287.0" layoutY="296.0" mnemonicParsing="false" onAction="#logoutButtonClicked" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: #8c8c8c; -fx-background-radius: 20;" text="Log Out" textFill="WHITE" />
             <Label alignment="TOP_CENTER" layoutX="175.0" layoutY="250.0" prefHeight="27.0" prefWidth="313.0" text="You're logged in successfully" textFill="WHITE">
                <font>
                   <Font size="18.0" />
