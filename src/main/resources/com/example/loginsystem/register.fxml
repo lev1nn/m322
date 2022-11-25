@@ -33,7 +33,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <ToggleButton fx:id="toggleButton" layoutX="563.0" layoutY="22.0" mnemonicParsing="false" onAction="#toggleButtonClicked" prefHeight="37.0" prefWidth="40.0" />
+            <ToggleButton fx:id="toggleButton" layoutX="560.0" layoutY="30.0" mnemonicParsing="false" onAction="#toggleButtonClicked" prefHeight="37.0" prefWidth="40.0" />
          </children>
       </AnchorPane>
    </center>

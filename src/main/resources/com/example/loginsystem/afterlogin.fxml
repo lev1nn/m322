@@ -26,12 +26,8 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="label" alignment="TOP_CENTER" layoutX="175.0" layoutY="176.0" prefHeight="27.0" prefWidth="314.0" text="Welcome user" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <ToggleButton fx:id="toggleButton" layoutX="566.0" layoutY="26.0" mnemonicParsing="false" onAction="#toggleButtonClicked" prefHeight="37.0" prefWidth="40.0" />
+            <Label fx:id="label" alignment="TOP_CENTER" layoutX="174.0" layoutY="194.0" prefHeight="27.0" prefWidth="314.0" text="Welcome user" textAlignment="CENTER" textFill="WHITE" />
+            <ToggleButton fx:id="toggleButton" layoutX="560.0" layoutY="30.0" mnemonicParsing="false" onAction="#toggleButtonClicked" prefHeight="37.0" prefWidth="40.0" />
          </children>
       </AnchorPane>
    </center>
