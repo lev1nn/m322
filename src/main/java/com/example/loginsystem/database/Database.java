@@ -60,6 +60,16 @@ public class Database {
         return false;
     }
 
+    public User getUserFromEmail(String email) {
+        for (User user : users) {
+            if (user.getEmailAddress().equals(email)) {
+                return user;
+            }
+        }
+
+        return null;
+    }
+
     public void saveChanges() throws IOException {
         FileWriter fileWriter = new FileWriter(FILE_PATH);
         gson.toJson(users, fileWriter);
