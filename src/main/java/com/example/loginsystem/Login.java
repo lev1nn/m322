@@ -12,6 +12,7 @@ import java.io.IOException;
 
 public class Login {
     private static Database db;
+    private static Main main;
 
     @FXML
     private Button button;
@@ -27,7 +28,7 @@ public class Login {
     }
 
     private void checkLogin() throws IOException {
-        Main main = new Main();
+        main = new Main();
         db = Database.getInstance();
 
         if (db.checkUser(String.valueOf(username.getText()))) {
@@ -43,17 +44,17 @@ public class Login {
     }
 
     public void registerButtonClicked(ActionEvent event) throws IOException {
-        Main main = new Main();
+        main = new Main();
         main.changeScene("register.fxml");
     }
 
     public void resetPasswordButtonClicked(ActionEvent event) throws IOException {
-        Main main = new Main();
+        main = new Main();
         main.changeScene("forgotpassword.fxml");
     }
 
     public void toggleButtonClicked(ActionEvent event) throws IOException {
-        Main main = new Main();
+        main = new Main();
         main.changeWallpaper();
     }
 }

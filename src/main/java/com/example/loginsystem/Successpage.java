@@ -1,7 +1,6 @@
 package com.example.loginsystem;
 
 import com.example.loginsystem.database.Database;
-import com.example.loginsystem.database.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,7 +9,8 @@ import javafx.scene.control.Label;
 import java.io.IOException;
 
 public class Successpage {
-    private Database db;
+    private static Database db;
+    private static Main main;
 
     @FXML
     private Button button;
@@ -24,14 +24,14 @@ public class Successpage {
     }
 
     public void logoutButtonClicked(ActionEvent event) throws IOException {
-        Main main = new Main();
+        main = new Main();
         main.changeScene("login.fxml");
 
         db.setInactive(db.getActiveUsers().get(0).getUsername());
     }
 
     public void toggleButtonClicked(ActionEvent event) throws IOException {
-        Main main = new Main();
+        main = new Main();
         main.changeWallpaper();
     }
 }

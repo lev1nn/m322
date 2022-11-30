@@ -12,6 +12,7 @@ import java.io.IOException;
 
 public class Register {
     private static Database db;
+    private static Main main;
 
     @FXML
     private Button button;
@@ -30,7 +31,7 @@ public class Register {
             db.addUser(String.valueOf(username.getText()), (db.generateHash(String.valueOf(password.getText()))), String.valueOf(emailaddress.getText()));
             db.saveChanges();
 
-            Main main = new Main();
+            main = new Main();
             main.changeScene("login.fxml");
         } else {
             label.setText("User with this username already exists");
@@ -38,12 +39,12 @@ public class Register {
     }
 
     public void loginButtonClicked(ActionEvent event) throws IOException {
-        Main main = new Main();
+        main = new Main();
         main.changeScene("login.fxml");
     }
 
     public void toggleButtonClicked(ActionEvent event) throws IOException {
-        Main main = new Main();
+        main = new Main();
         main.changeWallpaper();
     }
 }

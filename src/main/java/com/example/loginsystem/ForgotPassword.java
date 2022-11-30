@@ -10,14 +10,17 @@ import javafx.scene.control.TextField;
 import java.io.IOException;
 
 public class ForgotPassword {
+    private static Database db;
+    private static Main main;
+
     @FXML
     private Button button;
     @FXML
     private TextField emailaddress;
 
     public void resetPasswordButtonClicked(ActionEvent event) throws IOException {
-        Main main = new Main();
-        Database db = Database.getInstance();
+        main = new Main();
+        db = Database.getInstance();
 
         // TODO send mail with new password
         User user = db.getUserFromEmail(emailaddress.getText());
@@ -28,12 +31,12 @@ public class ForgotPassword {
     }
 
     public void loginButtonClicked(ActionEvent event) throws IOException {
-        Main main = new Main();
+        main = new Main();
         main.changeScene("login.fxml");
     }
 
     public void toggleButtonClicked(ActionEvent event) throws IOException {
-        Main main = new Main();
+        main = new Main();
         main.changeWallpaper();
     }
 }
