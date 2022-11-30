@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -22,6 +23,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         stg = stage;
+        stg.getIcons().add(new Image(String.valueOf(getClass().getResource("icons/lock.png"))));
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("login.fxml"));
         scene = new Scene(fxmlLoader.load(), 650, 375);
         scene.getStylesheets().add(darkTheme);
