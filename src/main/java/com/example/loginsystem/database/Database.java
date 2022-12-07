@@ -40,6 +40,15 @@ public class Database {
         users.add(new User(username, password, emailAddress));
     }
 
+    public boolean checkEmail(String emailAddress) {
+        for (User user : users) {
+            if (user.getEmailAddress().equals(emailAddress)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public boolean checkUser(String username) {
         for (User user : users) {
             if (user.getUsername().equals(username)) {

@@ -22,15 +22,15 @@
                   <Image url="@img/mojave-dark.jpg" />
                </image>
             </ImageView>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DIMGRAY" height="220.0" layoutX="172.0" layoutY="128.0" opacity="0.4" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="314.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DIMGRAY" height="224.0" layoutX="172.0" layoutY="124.0" opacity="0.4" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="314.0" />
             <TextField fx:id="emailaddress" layoutX="195.0" layoutY="144.0" prefHeight="36.0" prefWidth="267.0" promptText="Email" style="-fx-background-radius: 20;" />
             <TextField fx:id="username" layoutX="195.0" layoutY="193.0" prefHeight="36.0" prefWidth="267.0" promptText="Username" style="-fx-background-radius: 20;" />
             <PasswordField fx:id="password" layoutX="196.0" layoutY="242.0" prefHeight="34.0" prefWidth="265.0" promptText="Password" style="-fx-background-radius: 20;" />
             <Button fx:id="button" layoutX="382.0" layoutY="288.0" mnemonicParsing="false" onAction="#registerButtonClicked" prefHeight="34.0" prefWidth="80.0" style="-fx-background-color: #8c8c8c; -fx-background-radius: 20;" text="Register" textFill="WHITE" />
             <Hyperlink fx:id="loginButton" layoutX="196.0" layoutY="293.0" onAction="#loginButtonClicked" text="Log In" textFill="WHITE" />
-            <Label fx:id="label" alignment="TOP_CENTER" layoutX="172.0" layoutY="90.0" prefHeight="27.0" prefWidth="314.0" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="label" alignment="TOP_CENTER" layoutX="172.0" layoutY="96.0" prefHeight="27.0" prefWidth="314.0" text="Hello, enter your credentials to register" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font size="18.0" />
+                  <Font size="12.0" />
                </font>
             </Label>
             <ToggleButton fx:id="toggleButton" layoutX="560.0" layoutY="30.0" mnemonicParsing="false" onAction="#toggleButtonClicked" prefHeight="37.0" prefWidth="40.0" />
