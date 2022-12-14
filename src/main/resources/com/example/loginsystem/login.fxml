@@ -28,7 +28,7 @@
             <Hyperlink fx:id="registerButton" layoutX="312.0" layoutY="293.0" onAction="#registerButtonClicked" text="Register" textFill="WHITE" />
             <Hyperlink fx:id="resetPasswordButton" layoutX="195.0" layoutY="293.0" onAction="#resetPasswordButtonClicked" text="Forgot Password?" textFill="WHITE" />
             <Label fx:id="label" alignment="TOP_CENTER" layoutX="171.0" layoutY="143.0" prefHeight="27.0" prefWidth="314.0" text="Hello, enter your credentials to log in" textAlignment="CENTER" textFill="WHITE" />
-            <ToggleButton fx:id="toggleButton" layoutX="560.0" layoutY="30.0" mnemonicParsing="false" onAction="#toggleButtonClicked" prefHeight="37.0" prefWidth="40.0" />
+            <ToggleButton fx:id="toggleButton" layoutX="560.0" layoutY="30.0" mnemonicParsing="false" onAction="#toggleButtonClicked" prefHeight="37.0" prefWidth="40.0" style="-fx-background-radius: 10;" />
          </children>
       </AnchorPane>
    </center>
