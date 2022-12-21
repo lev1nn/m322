@@ -12,9 +12,9 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginsystem.Successpage">
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="406.0" prefWidth="614.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="415.0" fitWidth="728.0" layoutX="-65.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <ImageView fitHeight="530.0" fitWidth="714.0" layoutX="-57.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@img/mojave-dark.jpg" />
                </image>

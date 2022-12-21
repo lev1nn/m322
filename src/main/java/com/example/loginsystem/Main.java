@@ -29,6 +29,7 @@ public class Main extends Application {
         scene.getStylesheets().add(darkTheme);
         stage.setTitle("Login System");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 
