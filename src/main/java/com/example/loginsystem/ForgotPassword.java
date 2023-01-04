@@ -25,9 +25,8 @@ public class ForgotPassword {
         User user = db.getUserFromEmail(emailaddress.getText());
         user.setPassword(db.generateHash("n3wp4ssw0rd!"));
         db.saveChanges();
-        System.out.printf("[SERVER] email -> %s, msg: \"your new password is 'n3wp4ssw0rd!', try now to log in with your new password\" %n", emailaddress.getText());
+        db.setResetPasswordUser(user.getUsername());
         main.changeScene("login.fxml");
-        //main.showPopup("your new password is 'n3wp4ssw0rd!'");
     }
 
     public void loginButtonClicked(ActionEvent event) throws IOException {

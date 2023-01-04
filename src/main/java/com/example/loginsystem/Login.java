@@ -22,6 +22,16 @@ public class Login {
     private PasswordField password;
     @FXML
     private Label label;
+    @FXML
+    private void initialize() throws IOException {
+        db = Database.getInstance();
+
+        if (db.getResetPasswordUsers().isEmpty()) {
+            label.setText("Hello, enter your credentials to log in");
+        } else {
+            label.setText("Your new password is 'n3wp4ssw0rd!'");
+        }
+    }
 
     public void loginButtonClicked(ActionEvent event) throws IOException {
         checkLogin();
@@ -29,12 +39,12 @@ public class Login {
 
     private void checkLogin() throws IOException {
         main = new Main();
-        db = Database.getInstance();
 
         if (db.checkUser(String.valueOf(username.getText()))) {
             if (db.checkPassword(String.valueOf(username.getText()), db.generateHash(String.valueOf(password.getText())))) {
                 db.setActive(String.valueOf(username.getText()));
                 main.changeScene("afterlogin.fxml");
+                db.removeResetPasswordUsers();
             } else {
                label.setText("invalid password");
             }

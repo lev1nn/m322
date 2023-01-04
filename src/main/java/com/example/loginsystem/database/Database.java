@@ -18,6 +18,7 @@ import com.google.common.hash.Hashing;
 public class Database {
     private ArrayList<User> users;
     public ArrayList<User> activeUsers;
+    public ArrayList<User> resetPasswordUsers;
     private static Database database;
     private final String FILE_PATH = String.valueOf(Paths.get("src\\main\\java\\com\\example\\loginsystem\\database\\Users_New.json"));
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
@@ -27,6 +28,8 @@ public class Database {
         Reader reader = Files.newBufferedReader(Paths.get(FILE_PATH));
         Type listType = new TypeToken<ArrayList<User>>() {}.getType();
         users = gson.fromJson(reader, listType);
+        activeUsers = new ArrayList<>();
+        resetPasswordUsers = new ArrayList<>();
     }
 
     public static Database getInstance() throws IOException {
@@ -93,7 +96,6 @@ public class Database {
     public void setActive(String username) {
         for (User user : users) {
             if (user.getUsername().equals(username)) {
-                activeUsers = new ArrayList<>();
                 activeUsers.add(0, user);
             }
         }
@@ -109,5 +111,23 @@ public class Database {
 
     public ArrayList<User> getActiveUsers() {
         return activeUsers;
+    }
+
+    public void setResetPasswordUser(String username) {
+        for (User user : users) {
+            if (user.getUsername().equals(username)) {
+                resetPasswordUsers.add(0, user);
+            }
+        }
+    }
+
+    public void removeResetPasswordUsers() {
+        for (int i = 0; i < resetPasswordUsers.size(); i++) {
+            resetPasswordUsers.remove(i);
+        }
+    }
+
+    public ArrayList<User> getResetPasswordUsers() {
+        return resetPasswordUsers;
     }
 }

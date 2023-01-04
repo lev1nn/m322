@@ -4,9 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
-import javafx.stage.Popup;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -52,20 +50,4 @@ public class Main extends Application {
             scene.getStylesheets().add(darkTheme);
         }
     }
-
-    /*public void showPopup(String msg) {
-        Popup popup = new Popup();
-        Label label = new Label(msg);
-
-        label.setMinWidth(80);
-        label.setMinHeight(50);
-        label.setStyle("    -fx-background-color: white;");
-        label.setStyle("    -fx-textFill: white");
-        label.setStyle("    -fx-font-size: 12px;");
-
-        popup.getContent().add(label);
-        //popup.getClass().getResource("css/styles-popup.css").toExternalForm();
-
-        popup.show(stg);
-    }*/
 }
